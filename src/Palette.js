@@ -10,22 +10,30 @@ class Palette extends Component {
         super(props);
         this.state = { level: 500 };
         this.changeLevel = this.changeLevel.bind(this);
+        this.changeFormat = this.changeFormat.bind(this);
     }
 
     changeLevel(newLevel) {
-        this.setState({ level: newLevel });
+        this.setState({ 
+            level: newLevel,
+            format: 'hex' 
+        });
+    }
+
+    changeFormat(val) {
+        this.setState({format: val});
     }
 
     render() {
         const { colors } = this.props.palette;
-        const { level } = this.state
+        const { level, format } = this.state
         const colorBoxes = colors[level].map(color => (
-            <ColorBox background={color.hex} name={color.name} />
+            <ColorBox background={color[format]} name={color.name} />
         ));
 
         return (
             <div className='palette'>
-                <NavBar level={level} changeLevel={this.changeLevel} />
+                <NavBar level={level} changeLevel={this.changeLevel} handleChange={this.changeFormat}/>
                 <div className='palette-colors'>
                     {colorBoxes}
                 </div>
