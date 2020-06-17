@@ -26,7 +26,7 @@ const styles = {
         alignItems: 'center',
         margin: '0',
         color: 'black',
-        paddingTp: '0.5rem',
+        paddingTop: '0.5rem',
         fontSize: '1rem',
         position: 'relative'
     },
@@ -50,7 +50,7 @@ function MiniPalette(props) {
         <div className={classes.miniColor} style={{ backgroundColor: color.color }} key={color.name} />
     ));
     return (
-        <div className={classes.root}>
+        <div className={classes.root} onClick={props.handleClick}>
             <div className={classes.colors}>
                 {miniColorBoxes}
             </div>
