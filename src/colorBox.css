@@ -1,4 +1,4 @@
-.colorBox {
+/* .colorBox {
     width: 20%;
     height: 25%;
     margin: 0 auto;
@@ -6,7 +6,7 @@
     position: relative;
     cursor: pointer;
     margin-bottom: -3.5px;
-}
+} */
 
 .singleColorPalette {
     height: 98vh;
