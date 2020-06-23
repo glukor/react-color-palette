@@ -15,12 +15,12 @@
 .singleColorPalette .colorBox {
     height: 50%;
 }
-
+/* 
 .go-back {
     background-color: black;
-}
+} */
 
-.copy-button,
+/* .copy-button,
 .back-button {
     width: 100px;
     height: 30px;
@@ -39,7 +39,7 @@
     text-transform: uppercase;
     border: none;
     text-decoration: none;
-}
+} */
 
 /* .copy-button {
     opacity: 0;
